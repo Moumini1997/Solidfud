@@ -141,8 +141,9 @@ img { max-width: 100%; display: block; }
   transform: scale(1.05);
   color: var(--blue);
 }
-.sf-logo strong { color: #0f172a; }
-.sf-logo span { color: var(--blue); font-weight: 600; }
+.sf-logo strong {
+    color: #d1d5df;
+}
 
 .sf-dot {
   width: 14px;
