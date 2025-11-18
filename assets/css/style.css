@@ -281,7 +281,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
   color: #fff;
   overflow: hidden;
-  background: url("../img/hero.png") center/cover no-repeat;
+  background: url("../img/hero_compressed.jpg?v=2") center/cover no-repeat;
   background-attachment: fixed;
 }
 
