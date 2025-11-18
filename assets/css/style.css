@@ -132,7 +132,7 @@ img { max-width: 100%; display: block; }
   gap: .45rem;
   font-weight: 700;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: #5584f3;
   letter-spacing: .3px;
   text-decoration: none;
   transition: transform .25s ease, color .25s ease;
@@ -142,7 +142,7 @@ img { max-width: 100%; display: block; }
   color: var(--blue);
 }
 .sf-logo strong {
-    color: #d1d5df;
+    color: #9ecc4e;
 }
 
 .sf-dot {
