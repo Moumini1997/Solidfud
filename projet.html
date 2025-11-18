@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet — SolidFund</title>
+  <meta name="description" content="Consultez les détails d’un projet solidaire sur SolidFund." />
+  <!-- Polices et styles globaux -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Utilise la feuille de style originale du projet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+
+  <!-- ======================
+       NAVBAR (identique aux autres pages)
+  ======================= -->
+  <header class="sf-navbar" role="banner">
+    <div class="sf-nav-container">
+      <!-- Zone gauche -->
+      <div class="sf-left">
+        <form class="sf-searchbar" id="sf-search-form" role="search" onsubmit="return false;">
+          <input type="text" id="sf-search-input" placeholder="Rechercher un projet..." autocomplete="off" />
+          <button type="submit" class="sf-ok-btn">OK</button>
+        </form>
+        <nav class="sf-menu" aria-label="Navigation principale">
+          <div class="sf-dd">
+            <button class="sf-nav-item" aria-haspopup="true" aria-expanded="false">Je soutiens ▾</button>
+            <div class="sf-dropdown" role="menu">
+              <a href="projets.html#populaires" role="menuitem">Cagnottes populaires</a>
+              <a href="projets.html#nouveaux" role="menuitem">Nouveaux projets</a>
+              <a href="projets.html#themes" role="menuitem">Thèmes solidaires</a>
+            </div>
+          </div>
+          <a href="index.html" class="sf-logo" aria-label="SolidFund Accueil">
+            <div class="sf-dot" aria-hidden="true"></div>
+            <strong>Solid</strong><span>Fund</span>
+          </a>
+          <div class="sf-dd">
+            <button class="sf-nav-item" aria-haspopup="true" aria-expanded="false">Collecter des fonds ▾</button>
+            <div class="sf-dropdown" role="menu">
+              <a href="projet.html#creer" role="menuitem">Créer un projet</a>
+              <a href="projets.html#ressources" role="menuitem">Conseils &amp; ressources</a>
+              <a href="#comment-ca-marche" role="menuitem">Comment ça marche</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Zone droite -->
+      <div class="sf-right">
+        <div class="sf-dd">
+          <button class="sf-nav-item" aria-haspopup="true" aria-expanded="false">À propos ▾</button>
+          <div class="sf-dropdown" role="menu">
+            <a href="#mission" role="menuitem">Notre mission</a>
+            <a href="#transparence" role="menuitem">Transparence</a>
+            <a href="#contact" role="menuitem">Contact</a>
+          </div>
+        </div>
+        <div class="sf-profile-menu">
+          <button class="sf-profile-btn" id="sf-profile-toggle" aria-haspopup="true" aria-expanded="false">
+            <img src="img/profil.jpg" alt="Photo de profil" class="sf-avatar" />
+            <span>Amadou</span>
+            <i class="arrow" aria-hidden="true">▾</i>
+          </button>
+          <div class="sf-dropdown-profile" id="sf-profile-dropdown" role="menu" aria-label="Menu du profil">
+            <a href="#profil" role="menuitem">Mon profil</a>
+            <a href="#projets" role="menuitem">Mes projets</a>
+            <a href="#logout" class="danger" role="menuitem">Déconnexion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================
+       CONTENU PRINCIPAL : Détail du projet
+  ======================= -->
+  <main class="project-detail-page" role="main" style="padding-top:3rem; padding-bottom:3rem;">
+    <div class="sf-container" id="project-detail-container">
+      <!-- Le contenu du projet sera injecté via JavaScript -->
+    </div>
+  </main>
+
+  <!-- ======================
+       FOOTER (identique aux autres pages)
+  ======================= -->
+ <footer class="sf-footer">
+    <div class="sf-container foot-grid">
+       <div class="logo-social">
+         <a href="index.html" class="sf-logo">
+          <div class="sf-dot"></div>
+          <strong>Solid</strong><span>Fund</span>
+         </a>
+          <p style="margin-top:.8rem; color:#cbd5e1;">
+           SolidFund relie la diaspora et les communautés <br>locales pour financer des projets solidaires durables.
+          </p>
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <nav>
+          <h4>Découvrir</h4>
+          <a href="#mission">Notre mission</a>
+          <a href="#transparence">Transparence</a>
+          </nav>
+        </div>
+        <div class="dec-trans">
+             <nav>
+             <h4>Créer</h4>
+             <a href="projet.html#creer">Créer un projet</a>
+             <a href="#comment-ca-marche">Comment ça marche</a>
+            </nav>
+           <div class="link">
+             <nav>
+              <h4>Contact</h4>
+              <a href="#contact">Nous écrire</a>
+              <a href="#">Mentions légales</a>
+              <a href="#">Politique de confidentialité</a>
+            </nav>
+           </div>
+       </div>
+    </div>
+
+    <div class="foot-bottom">
+      © <span id="year"></span> SolidFund — Ensemble, finançons l’avenir 🌍
+    </div>
+  </footer>
+
+  <!-- ======================
+       SCRIPTS
+  ======================= -->
+ <script src="assets/js/ui.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Données des projets -->
+  <script src="assets/data/projects.js"></script>
+  <!-- Script interne pour charger le projet -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Récupère l'identifiant de l'URL (?id=)
+      const params = new URLSearchParams(window.location.search);
+      const idParam = params.get('id');
+      const container = document.getElementById('project-detail-container');
+      // Si aucun identifiant n'est fourni, on affiche un message d'erreur
+      if (!idParam) {
+        container.innerHTML = '<p>Projet introuvable.</p>';
+        return;
+      }
+      // Recherche du projet correspondant dans le tableau global "projects"
+      const proj = (typeof projects !== 'undefined') ? projects.find((p) => p.id == idParam) : null;
+      if (!proj) {
+        container.innerHTML = '<p>Projet introuvable.</p>';
+        return;
+      }
+      // Calcule le pourcentage de fonds collectés
+      const percent = Math.round((proj.raised / proj.goal) * 100);
+      // Fonction utilitaire pour formater les montants en francs CFA
+      const formatCurrency = (value) => {
+        return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF', minimumFractionDigits: 0 }).format(value);
+      };
+      // Retourne la classe CSS du badge correspondant à la catégorie
+      const getCategoryClass = (cat) => {
+        return 'cat-' + cat;
+      };
+      // Construit les listes (impact, objectifs secondaires, projets similaires) si elles existent
+      const impactList = Array.isArray(proj.impactAttendu) && proj.impactAttendu.length
+        ? '<h3>Impact attendu</h3><ul>' + proj.impactAttendu.map(item => '<li>' + item + '</li>').join('') + '</ul>'
+        : '';
+      const secondaryList = Array.isArray(proj.secondaryGoals) && proj.secondaryGoals.length
+        ? '<h3>Objectifs secondaires</h3><ul>' + proj.secondaryGoals.map(item => '<li>' + item + '</li>').join('') + '</ul>'
+        : '';
+      const similarList = Array.isArray(proj.similarProjects) && proj.similarProjects.length
+        ? '<h3>Projets similaires</h3><ul>' + proj.similarProjects.map(item => '<li>' + item + '</li>').join('') + '</ul>'
+        : '';
+      // Formate la description longue en paragraphes
+      let longDesc = '';
+      if (proj.longDescription) {
+        longDesc = proj.longDescription.split(/\\n\\n/).map(par => '<p style="margin-bottom:1rem;">' + par + '</p>').join('');
+      } else if (proj.description) {
+        longDesc = '<p style="margin-bottom:1rem;">' + proj.description + '</p>';
+      }
+      // Injecte le contenu dynamique
+      container.innerHTML = `
+        <article class="project-detail-card" style="background:#fff; border-radius:20px; overflow:hidden; box-shadow:0 4px 12px rgba(15,23,42,0.05);">
+          <div class="media" style="position:relative; height:260px; overflow:hidden;">
+            <img src="${proj.image}" alt="${proj.title}" style="width:100%; height:100%; object-fit:cover;">
+            <span class="category-label ${getCategoryClass(proj.category)}" style="position:absolute; top:16px; left:16px; padding:.3rem .7rem; border-radius:999px; font-size:.75rem; font-weight:600; color:#fff;">${proj.category}</span>
+          </div>
+          <div class="body" style="padding:1.5rem;">
+            <h1 style="font-size:1.8rem; margin:0 0 .6rem; font-weight:700;">${proj.title}</h1>
+            ${proj.location ? '<p style="font-size:.9rem; color:var(--muted); margin-bottom:.4rem;"><strong>Localisation :</strong> ' + proj.location + '</p>' : ''}
+            ${proj.donors ? '<p style="font-size:.9rem; color:var(--muted); margin-bottom:.4rem;"><strong>Contributeurs :</strong> ' + proj.donors + ' donateurs</p>' : ''}
+            ${proj.activeSince ? '<p style="font-size:.9rem; color:var(--muted); margin-bottom:.4rem;"><strong>' + proj.activeSince + '</strong></p>' : ''}
+            ${longDesc}
+            <p class="objective" style="font-size:1.1rem; margin-top:1rem; margin-bottom:.8rem;"><strong>${formatCurrency(proj.raised)}</strong> sur <strong>${formatCurrency(proj.goal)}</strong></p>
+            <div class="progress" style="background:#f1f5f9; height:10px; border-radius:999px; overflow:hidden; margin-bottom:.35rem;">
+              <div style="height:100%; width:0%; background:linear-gradient(90deg,var(--green),#03c6a7); transition:width 1s ease-out; border-radius:999px;" id="progress-bar"></div>
+            </div>
+            <p class="percentage" style="font-size:.9rem; color:var(--muted); margin-bottom:1.2rem;">${percent}% collecté</p>
+            <a href="#" class="btn" style="display:inline-block; padding:.7rem 1.4rem; border-radius:999px; background:var(--blue); color:#fff; font-weight:600; text-decoration:none;">Soutenir ce projet</a>
+            ${impactList}
+            ${secondaryList}
+            ${similarList}
+          </div>
+        </article>
+      `;
+      // Anime la barre de progression après l’insertion
+      requestAnimationFrame(() => {
+        const bar = document.getElementById('progress-bar');
+        if (bar) {
+          bar.style.width = percent + '%';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
